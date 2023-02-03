@@ -19,8 +19,7 @@ Route::get('/', function () {
     return  redirect()->route('users.create');
 });
 
-Route::resource('/users', UserController::class);   
-Route::get('/users', [UserController::class, 'list']);
+Route::get('/users/list', [UserController::class, 'list'])->name('users.list');
+Route::resource('/users', UserController::class);
 
 Route::resource('banner', BannerController::class);
-

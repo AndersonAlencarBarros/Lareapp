@@ -14,7 +14,7 @@ class UserController extends Controller
     }
 
     public function list()
-    {
+    {  
         $users = User::all();
         return view('users.list')->with('users', $users);
     }
@@ -40,7 +40,7 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('users.list');
+        return redirect()->back();
     }
 
     public function update(Request $request, $id)
