@@ -23,8 +23,7 @@ class BannerController extends Controller
         // Realiza o upload do arquivo
         $fileName = 'banner__' . time() . '.' . $request->file('banner')->extension();
         // $request->file('banner')->move(public_path('uploads'), $fileName);
-
-        Storage::put("/uploads/$fileName", $request->file('banner'), 'private');
+        $request->file('banner')->storeAs('uploads', $fileName);
 
         // Salva o nome do banco de dados
         $banner = new Banner;
@@ -36,7 +35,7 @@ class BannerController extends Controller
 
     public function destroy(Banner $banner)
     {
-        Storage::delete("uploads/$banner->name");
+        Storage::delete("./storage/uploads/$banner->name");
 
         $banner->delete();
         return redirect()->route('banners.index');
