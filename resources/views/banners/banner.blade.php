@@ -89,7 +89,7 @@
             <div class="col-md-3">
               <img
                 class=" rounded mb-3 img-fluid rounded img-thumbnail"
-                src="storage/uploads/{{ $banner->name }}"
+                src="{{ asset("storage/uploads/$banner->name") }}"
               />
 
               <form
