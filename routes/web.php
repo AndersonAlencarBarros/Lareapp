@@ -22,4 +22,4 @@ Route::get('/', function () {
 Route::get('/users/list', [UserController::class, 'list'])->name('users.list');
 Route::resource('/users', UserController::class);
 
-Route::resource('banner', BannerController::class);
+Route::resource('/banners', BannerController::class);

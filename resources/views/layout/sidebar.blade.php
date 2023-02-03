@@ -37,7 +37,7 @@
           </li>
 
           <li>
-            <a href="{{ route('banner.index') }}">
+            <a href="{{ route('banners.index') }}">
               <i class="fa fa-picture-o "></i> Banner
             </a>
           </li>
