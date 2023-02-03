@@ -45,7 +45,7 @@
                           <div class='d-flex flex-wrap justify-content-center'>
                             <a
                               class="fa fa-eye btn btn-success mx-1"
-                              href="{{ route('users.update', $user->id) }}"
+                              href="{{ route('users.show', $user->id) }}"
                             >
                             </a>
 

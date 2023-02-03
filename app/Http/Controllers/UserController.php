@@ -14,14 +14,14 @@ class UserController extends Controller
     }
 
     public function list()
-    {  
+    {
         $users = User::all();
         return view('users.list')->with('users', $users);
     }
 
     public function show(User $user)
     {
-        return view('users.update', compact('users'));
+        return view('users.update')->with('user', $user);
     }
 
     public function store(Request $request)
@@ -43,21 +43,26 @@ class UserController extends Controller
         return redirect()->back();
     }
 
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'phone' => 'required',
-        ]);
+    public function update(Request $request, User $user)
+    { 
 
-        $user = User::find($id);
+        // $request->validate([
+        //     'name' => 'required',
+        //     'email' => 'required|email|unique:users',
+        //     'phone' => 'required',
+        // ]);   
+        
+        // $user = User::find($id);
 
-        $user->name =  $request->get('name');
-        $user->email = $request->get('email');
-        $user->phone = $request->get('phone');
-        $user->save();
+        // $user->name =  $request->get('name');
+        // $user->email = $request->get('email');
+        // $user->phone = $request->get('phone');
+        // $user->save();
 
-        return redirect('users.list');
+        $user->fill($request->post())->save();
+
+
+
+        return redirect()->route('users.list');
     }
 }

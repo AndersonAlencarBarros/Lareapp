@@ -21,7 +21,7 @@
       <div class="x_content">
         <form
           class="form-label-left input_mask"
-          action="{{ route('users.update',$users->id) }}"
+          action="{{ route('users.update', $user->id) }}"
           method="POST"
           enctype="multipart/form-data"
         >
@@ -35,7 +35,7 @@
               type="text"
               name="name"
               placeholder="Nome Completo"
-              value=""
+              value="{{ $user->name }}"
             />
             <span
               class="fa fa-user form-control-feedback left"
@@ -50,7 +50,7 @@
               type="email"
               name="email"
               placeholder="Email"
-              value=""
+              value="{{ $user->email }}"
             />
             <span
               class="fa fa-envelope form-control-feedback left"
@@ -65,7 +65,7 @@
               type="tel"
               name="phone"
               placeholder="Telefone"
-              value=""
+              value="{{ $user->phone }}"
             />
             <span
               class="fa fa-envelope form-control-feedback left"
