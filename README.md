@@ -1,3 +1,8 @@
-<p align="center">Larepp</p>
+<h1 align="center">
+    Larepp
+</h1>
  
-Projeto usando Laravel e Gentelella.
+Projeto desenvolvido usando Laravel + Gentelella
+
+
+*Anderson de Alencar*

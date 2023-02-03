@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BannerController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,17 +16,11 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome', [
-        'name' => 'Anderson'
-    ]);
+    return  redirect()->route('users.create');
 });
 
-Route::get('/user', function () {
-    return view('user');
-});
+Route::resource('/users', UserController::class);   
+Route::get('/users', [UserController::class, 'list']);
 
-Route::get('/banner', function () {
-    return view('banner');
-});
+Route::resource('banner', BannerController::class);
 
-Route::get('/user/{id}', [UserController::class, 'show']);
