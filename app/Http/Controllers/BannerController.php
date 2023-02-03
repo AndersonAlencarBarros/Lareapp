@@ -23,7 +23,7 @@ class BannerController extends Controller
         // Realiza o upload do arquivo
         $fileName = 'banner__' . time() . '.' . $request->file('banner')->extension();
         // $request->file('banner')->move(public_path('uploads'), $fileName);
-        $request->file('banner')->storeAs('uploads', $fileName);
+        $request->file('banner')->storeAs('public/uploads', $fileName);
 
         // Salva o nome do banco de dados
         $banner = new Banner;
