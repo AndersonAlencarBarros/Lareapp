@@ -3,6 +3,3 @@
 </h1>
  
 Projeto desenvolvido usando Laravel + Gentelella
-
-
-*Anderson de Alencar*
