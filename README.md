@@ -2,7 +2,6 @@
     Larepp
 </h1>
  
-Projeto desenvolvido usando Laravel + Gentelella
+Projeto desenvolvido usando Laravel + Gentelella + Bootstrap
 
-
-*Anderson de Alencar*
+Plataforma para gerenciamento de usuários e banners
