@@ -1,6 +1,6 @@
-<h1 align="center">
+<h2 align="center">
     Larepp
-</h1>
+</h2>
  
 Projeto desenvolvido usando Laravel + Gentelella + Bootstrap
 
